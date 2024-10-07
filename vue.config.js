@@ -19,7 +19,7 @@ module.exports = {
   },
   // 开启代理
   devServer: {
-    port: 8888,
+    port: 80,
     open: true,
     disableHostCheck:true,
     hot:true,//自动保存
