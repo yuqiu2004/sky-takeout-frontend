@@ -24,6 +24,6 @@ export const login = (data: any) =>
  export const getEmployeeList = (params: any) =>
   request({
     'url': `employee/page`,
-    'method': 'post',
+    'method': 'get',
     params
   })
