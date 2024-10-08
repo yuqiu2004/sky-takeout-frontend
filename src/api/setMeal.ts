@@ -8,7 +8,7 @@ import request from '@/utils/request'
 // 查询列表数据
 export const getSetmealPage = (params: any) => {
   return request({
-    url: '/setmeal/page',
+    url: '/setMeal/page',
     method: 'get',
     params,
   },)
@@ -17,7 +17,7 @@ export const getSetmealPage = (params: any) => {
 // 删除数据接口
 export const deleteSetmeal = (ids: string) => {
   return request({
-    url: '/setmeal',
+    url: '/setMeal',
     method: 'delete',
     params: { ids }
   })
@@ -26,7 +26,7 @@ export const deleteSetmeal = (ids: string) => {
 // 修改数据接口
 export const editSetmeal = (params: any) => {
   return request({
-    url: '/setmeal',
+    url: '/setMeal',
     method: 'put',
     data: { ...params }
   })
@@ -35,7 +35,7 @@ export const editSetmeal = (params: any) => {
 // 新增数据接口
 export const addSetmeal = (params: any) => {
   return request({
-    url: '/setmeal',
+    url: '/setMeal',
     method: 'post',
     data: { ...params }
   })
@@ -44,15 +44,15 @@ export const addSetmeal = (params: any) => {
 // 查询详情接口
 export const querySetmealById = (id: string | (string | null)[]) => {
   return request({
-    url: `/setmeal/${id}`,
+    url: `/setMeal/${id}`,
     method: 'get'
   })
 }
 
 // 批量起售禁售
-export const setmealStatusByStatus = (params: any) => {
+export const setMealStatusByStatus = (params: any) => {
   return request({
-    url: `/setmeal/status/${params.status}`,
+    url: `/setMeal/status/${params.status}`,
     method: 'post',
     params: { id: params.ids }
   })

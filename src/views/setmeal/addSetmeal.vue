@@ -278,8 +278,8 @@ export default class extends Vue {
         ;(this.ruleForm as any).price = res.data.data.price
         // this.imageUrl = `http://172.17.2.120:8080/common/download?name=${res.data.data.image}`
         this.imageUrl = res.data.data.image
-        this.checkList = res.data.data.setmealDishes
-        this.dishTable = res.data.data.setmealDishes.reverse()
+        this.checkList = res.data.data.setMealDishes
+        this.dishTable = res.data.data.setMealDishes.reverse()
         this.ruleForm.idType = res.data.data.categoryId
       } else {
         this.$message.error(res.data.msg)
@@ -357,7 +357,7 @@ export default class extends Vue {
         }
         if (!this.ruleForm.image) return this.$message.error('套餐图片不能为空')
         let prams = { ...this.ruleForm } as any
-        prams.setmealDishes = this.dishTable.map((obj: any) => ({
+        prams.setMealDishes = this.dishTable.map((obj: any) => ({
           copies: obj.copies,
           dishId: obj.dishId,
           name: obj.name,
@@ -374,7 +374,7 @@ export default class extends Vue {
               if (res && res.data && res.data.code === 1) {
                 this.$message.success('套餐添加成功！')
                 if (!st) {
-                  this.$router.push({ path: '/setmeal' })
+                  this.$router.push({ path: '/setMeal' })
                 } else {
                   ;(this as any).$refs.ruleForm.resetFields()
                   this.dishList = []
@@ -406,7 +406,7 @@ export default class extends Vue {
             .then(res => {
               if (res.data.code === 1) {
                 this.$message.success('套餐修改成功！')
-                this.$router.push({ path: '/setmeal' })
+                this.$router.push({ path: '/setMeal' })
               } else {
                 // this.$message.error(res.data.desc || res.data.message)
               }

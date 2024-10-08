@@ -148,7 +148,7 @@ import {
   getSetmealPage,
   editSetmeal,
   deleteSetmeal,
-  setmealStatusByStatus,
+  setMealStatusByStatus,
   dishCategoryList
 } from '@/api/setMeal'
 import InputAutoComplete from '@/components/InputAutoComplete/index.vue'
@@ -225,9 +225,9 @@ export default class extends Vue {
   // 添加更改
   private addSetMeal(st: any) {
     if (st === 'add') {
-      this.$router.push({ path: '/setmeal/add' })
+      this.$router.push({ path: '/setMeal/add' })
     } else {
-      this.$router.push({ path: '/setmeal/add', query: { id: st.id } })
+      this.$router.push({ path: '/setMeal/add', query: { id: st.id } })
     }
   }
 
@@ -278,7 +278,7 @@ export default class extends Vue {
       cancelButtonText: '取消',
       type: 'warning'
     }).then(() => {
-      setmealStatusByStatus(params)
+      setMealStatusByStatus(params)
         .then(res => {
           if (res.data.code === 1) {
             this.$message.success('套餐状态已经更改成功！')

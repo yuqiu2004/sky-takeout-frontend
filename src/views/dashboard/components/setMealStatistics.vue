@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <h2 class="homeTitle">
-      套餐总览<span><router-link to="setmeal">套餐管理</router-link></span>
+      套餐总览<span><router-link to="setMeal">套餐管理</router-link></span>
     </h2>
     <div class="orderviewBox">
       <ul>
@@ -14,7 +14,7 @@
           <span class="num">{{ setMealData.discontinued }}</span>
         </li>
         <li class="add">
-          <router-link to="setmeal/add">
+          <router-link to="setMeal/add">
             <i></i>
             <p>新增套餐</p>
           </router-link>

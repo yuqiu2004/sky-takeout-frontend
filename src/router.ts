@@ -71,9 +71,9 @@ const router = new Router({
           }
         },
         {
-          path: "setmeal",
+          path: "setMeal",
           component: () =>
-            import(/* webpackChunkName: "shopTable" */ "@/views/setmeal/index.vue"),
+            import(/* webpackChunkName: "shopTable" */ "@/views/setMeal/index.vue"),
           meta: {
             title: "套餐管理",
             icon: "icon-combo"
@@ -128,9 +128,9 @@ const router = new Router({
         },
         
         {
-          path: "/setmeal/add",
+          path: "/setMeal/add",
           component: () =>
-            import(/* webpackChunkName: "shopTable" */ "@/views/setmeal/addSetmeal.vue"),
+            import(/* webpackChunkName: "shopTable" */ "@/views/setMeal/addSetmeal.vue"),
           meta: {
             title: "添加套餐",
             hidden: true
