@@ -180,7 +180,7 @@ import { Component, Vue } from 'vue-property-decorator'
 import HeadLable from '@/components/HeadLable/index.vue'
 import ImageUpload from '@/components/ImgUpload/index.vue'
 import AddDish from './components/AddDish.vue'
-import { querySetmealById, addSetmeal, editSetmeal } from '@/api/setMeal'
+import { querySetMealById, addSetMeal, editSetMeal } from '@/api/setMeal'
 import { getCategoryList } from '@/api/dish'
 import { baseUrl } from '@/config.json'
 
@@ -271,7 +271,7 @@ export default class extends Vue {
   }
 
   private async init() {
-    querySetmealById(this.$route.query.id).then(res => {
+    querySetMealById(this.$route.query.id).then(res => {
       if (res && res.data && res.data.code === 1) {
         this.ruleForm = res.data.data
         this.ruleForm.status = res.data.data.status == '1'
@@ -369,7 +369,7 @@ export default class extends Vue {
         // delete prams.dishList
         if (this.actionType == 'add') {
           delete prams.id
-          addSetmeal(prams)
+          addSetMeal(prams)
             .then(res => {
               if (res && res.data && res.data.code === 1) {
                 this.$message.success('套餐添加成功！')
@@ -402,7 +402,7 @@ export default class extends Vue {
             })
         } else {
           delete prams.updateTime
-          editSetmeal(prams)
+          editSetMeal(prams)
             .then(res => {
               if (res.data.code === 1) {
                 this.$message.success('套餐修改成功！')

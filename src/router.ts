@@ -130,7 +130,7 @@ const router = new Router({
         {
           path: "/setMeal/add",
           component: () =>
-            import(/* webpackChunkName: "shopTable" */ "@/views/setMeal/addSetmeal.vue"),
+            import(/* webpackChunkName: "shopTable" */ "@/views/setMeal/addSetMeal.vue"),
           meta: {
             title: "添加套餐",
             hidden: true

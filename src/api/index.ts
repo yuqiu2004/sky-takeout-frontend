@@ -28,7 +28,7 @@ request({
 // 套餐总览
 export const getSetMealStatistics = () =>
 request({
-  'url': `/workspace/overviewSetmeals`,
+  'url': `/workspace/overviewSetMeals`,
   'method': 'get'
 })
 // 营业数据

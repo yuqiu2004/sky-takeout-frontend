@@ -6,7 +6,7 @@ import request from '@/utils/request'
  **/
 
 // 查询列表数据
-export const getSetmealPage = (params: any) => {
+export const getSetMealPage = (params: any) => {
   return request({
     url: '/setMeal/page',
     method: 'get',
@@ -15,7 +15,7 @@ export const getSetmealPage = (params: any) => {
 }
 
 // 删除数据接口
-export const deleteSetmeal = (ids: string) => {
+export const deleteSetMeal = (ids: string) => {
   return request({
     url: '/setMeal',
     method: 'delete',
@@ -24,7 +24,7 @@ export const deleteSetmeal = (ids: string) => {
 }
 
 // 修改数据接口
-export const editSetmeal = (params: any) => {
+export const editSetMeal = (params: any) => {
   return request({
     url: '/setMeal',
     method: 'put',
@@ -33,7 +33,7 @@ export const editSetmeal = (params: any) => {
 }
 
 // 新增数据接口
-export const addSetmeal = (params: any) => {
+export const addSetMeal = (params: any) => {
   return request({
     url: '/setMeal',
     method: 'post',
@@ -42,7 +42,7 @@ export const addSetmeal = (params: any) => {
 }
 
 // 查询详情接口
-export const querySetmealById = (id: string | (string | null)[]) => {
+export const querySetMealById = (id: string | (string | null)[]) => {
   return request({
     url: `/setMeal/${id}`,
     method: 'get'

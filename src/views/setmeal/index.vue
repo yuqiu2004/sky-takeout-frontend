@@ -145,9 +145,9 @@
 import { Component, Vue } from 'vue-property-decorator'
 import HeadLable from '@/components/HeadLable/index.vue'
 import {
-  getSetmealPage,
-  editSetmeal,
-  deleteSetmeal,
+  getSetMealPage,
+  editSetMeal,
+  deleteSetMeal,
   setMealStatusByStatus,
   dishCategoryList
 } from '@/api/setMeal'
@@ -202,7 +202,7 @@ export default class extends Vue {
 
   private async init(isSearch?) {
     this.isSearch = isSearch
-    await getSetmealPage({
+    await getSetMealPage({
       page: this.page,
       pageSize: this.pageSize,
       name: this.input || undefined,
@@ -243,7 +243,7 @@ export default class extends Vue {
       cancelButtonText: '取消',
       type: 'warning'
     }).then(() => {
-      deleteSetmeal(type === '批量' ? this.checkList.join(',') : id)
+      deleteSetMeal(type === '批量' ? this.checkList.join(',') : id)
         .then(res => {
           if (res.data.code === 1) {
             this.$message.success('删除成功！')
