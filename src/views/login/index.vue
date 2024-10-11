@@ -1,16 +1,16 @@
 <template>
   <div class="login">
     <div class="login-box">
-      <img src="@/assets/login/login-l.png" alt="" />
+      <img src="@/assets/login/loginBox-background.png" alt="" />
       <div class="login-form">
         <el-form ref="loginForm" :model="loginForm" :rules="loginRules">
           <div class="login-form-title">
-            <img
+            <!-- <img
               src="@/assets/login/icon_logo.png"
               style="width: 149px; height: 38px"
               alt=""
-            />
-            <!-- <span class="title-label">苍穹外卖</span> -->
+            /> -->
+            <span class="title-label">雨丘平台后台管理登录</span>
           </div>
           <el-form-item prop="username">
             <el-input
@@ -36,7 +36,7 @@
               class="login-btn"
               size="medium"
               type="primary"
-              style="width: 100%"
+              style="width: 55%"
               @click.native.prevent="handleLogin"
             >
               <span v-if="!loading">登录</span>
@@ -125,17 +125,18 @@ export default class extends Vue {
   align-items: center;
   height: 100%;
   // background: #476dbe;
-  background-color: #333;
+  background-color: #d8f2fb;
 }
 
 .login-box {
-  width: 1000px;
-  height: 474.38px;
+  width: 85%;
+  height: 80%;
   border-radius: 8px;
   display: flex;
   img {
     width: 60%;
     height: auto;
+    border-radius: 8px;
   }
 }
 
@@ -153,11 +154,13 @@ export default class extends Vue {
   justify-content: center;
   align-items: center;
   .el-form {
-    width: 214px;
+    width: 270px;
     height: 307px;
   }
   .el-form-item {
     margin-bottom: 30px;
+    text-align: center; /* 添加这一行 */
+    width: 100%; /* 保持这一行 */
   }
   .el-form-item.is-error .el-input__inner {
     border: 0 !important;
@@ -177,6 +180,7 @@ export default class extends Vue {
     font-weight: 400;
     color: #333333;
     height: 32px;
+    width: 80%;
     line-height: 32px;
   }
   .el-input__prefix {
@@ -206,25 +210,28 @@ export default class extends Vue {
   font-weight: 500;
   color: #333333;
   // background: #09a57a;
-  background-color: #ffc200;
+  background-color: #579bf3;
   &:hover,
   &:focus {
     // background: #09a57a;
-    background-color: #ffc200;
-    color: #ffffff;
+    background-color: #579bf3;
+    color: #358849;
   }
 }
 .login-form-title {
-  height: 36px;
+  height: 50px;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-bottom: 40px;
   .title-label {
-    font-weight: 500;
-    font-size: 20px;
+    font-weight: bold;
+    width: 100%;
+    font-size: 25px;
     color: #333333;
     margin-left: 10px;
+    font-family:'Times New Roman', Times, serif;
   }
 }
 </style>
