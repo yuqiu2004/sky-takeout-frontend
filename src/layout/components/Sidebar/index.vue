@@ -135,7 +135,7 @@ export default class extends Vue {
 <style lang="scss" scoped>
 .logo {
   text-align: center;
-  background-color: #ffc100;
+  background-color: #ffeb6a;
   padding: 15px 0 0;
   height: 60px;
   img {
@@ -150,7 +150,7 @@ export default class extends Vue {
 }
 .el-scrollbar {
   height: 100%;
-  background-color: rgb(52, 55, 68);
+  background-color: rgb(246, 244, 150);
 }
 
 .el-menu {
