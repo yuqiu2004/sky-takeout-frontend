@@ -136,7 +136,7 @@ export default class extends Vue {
 .logo {
   text-align: center;
   background-color: #ffeb6a;
-  padding: 15px 0 0;
+  padding: 8px 0 0;
   height: 60px;
   img {
     display: inline-block;
